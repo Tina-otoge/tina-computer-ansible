@@ -1,0 +1,5 @@
+- name: Configure dconf values
+  community.general.dconf:
+    key: "{{ item.key }}"
+    value: "{{ item.value }}"
+  loop: "{{ dconf | dict2items }}"

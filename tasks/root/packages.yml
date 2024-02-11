@@ -1,0 +1,8 @@
+- name: Remove packages
+  package:
+    name: "{{ packages_remove }}"
+    state: absent
+
+- name: Install packages
+  package:
+    name: "{{ packages_install }}"

@@ -1,0 +1,38 @@
+packages_remove:
+  - "@gnome-desktop"
+  - gnome-abrt
+  - gnome-tour
+  - libreoffice-*
+  - rhythmbox
+  - yelp
+
+packages_install:
+  - bat
+  - fzf
+  - gnome-software
+  - gnome-terminal
+  - htop
+  - mpv
+  - nautilus
+  - sshfs
+  - vim
+  - xclip
+  - zsh
+  - zsh-syntax-highlighting
+
+_packages_todo_needs_repo:
+  - code
+  - gh
+
+_packages_note_already_installed_fedora39_workstation:
+  - curl
+  - flatpak
+  - git
+  - imagemagick
+  - jq
+  - ncdu
+  - podman
+  - rsync
+  - sqlite3
+  - tree
+  - wget

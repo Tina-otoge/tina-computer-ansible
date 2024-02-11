@@ -1,0 +1,37 @@
+dconf:
+  # TODO: Automatically add '' around strings
+  "/org/gnome/desktop/interface/gtk-theme": "'Orchis-Red-Compact'"
+  "/org/gnome/desktop/interface/icon-theme": "'Vimix'"
+  "/org/gnome/desktop/peripherals/touchpad/disable-while-typing": false
+  "/org/gnome/desktop/peripherals/touchpad/tap-to-click": true
+  "/org/gnome/desktop/wm/keybindings/move-to-workspace-left": ["<Shift><Super>q","<Shift><Super>a"]
+  "/org/gnome/desktop/wm/keybindings/move-to-workspace-right": ["<Shift><Super>d"]
+  "/org/gnome/desktop/wm/keybindings/switch-to-workspace-left": ["<Super>q","<Super>a"]
+  "/org/gnome/desktop/wm/keybindings/switch-to-workspace-right": ["<Super>d"]
+  "/org/gnome/desktop/wm/preferences/button-layout": "'appmenu:minimize,maximize,close'"
+  "/org/gnome/desktop/wm/preferences/resize-with-right-button": true
+  "/org/gnome/shell/extensions/tiling-assistant/window-gap": 8
+  "/org/gnome/shell/extensions/user-theme/name": "'Orchis-Red'"
+
+_dconf_todo_keybinds:
+  # Special case because every added command is added as
+  # /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/customX
+  # where X is an ID from 0
+  - name: Launch terminal
+    command: gnome-terminal
+    binding: <Super>Return
+
+_dconf_todo_terminal:
+  # Special case because terminal is customized through each terminal profile
+  # with its own custom generated ID under
+  # /org/gnome/terminal/legacy/profiles:/:XXXX-XXXX-XXXX-XXXX-XXXX
+  "background-color": "#272822"
+  "background-transparency-percent": 16
+  font: Mononoki Nerd Font Mono 12
+  "foreground-color": "#f8f8f2"
+  # Monokai from terminal.sexy
+  palette: ['#272822', '#f92672', '#a6e22e', '#f4bf75', '#66d9ef', '#ae81ff', '#a1efe4', '#f8f8f2', '#75715e', '#f92672', '#a6e22e', '#f4bf75', '#66d9ef', '#ae81ff', '#a1efe4', '#f9f8f5']
+  "use-system-font": false
+  "use-theme-background": false
+  "use-theme-colors": false
+  "use-transparent-background": true

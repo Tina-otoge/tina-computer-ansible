@@ -1,0 +1,30 @@
+- hosts: localhost
+  connection: local
+
+  tasks:
+    - include_tasks:
+        file: "tasks/root/{{ task }}.yml"
+        apply:
+          become: true
+          tags:
+            - root
+            - "{{ task }}"
+      loop:
+        - hostname
+        - packages
+      loop_control:
+        loop_var: task
+      tags: [ always ]
+
+    - include_tasks:
+        file: "tasks/user/{{ task }}.yml"
+        apply:
+          tags:
+            - user
+            - "{{ task }}"
+      loop:
+        - shell
+        - dconf
+      loop_control:
+        loop_var: task
+      tags: [ always ]
